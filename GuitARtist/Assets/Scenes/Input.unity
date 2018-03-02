@@ -1012,7 +1012,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1578869247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -399.99997, y: 304.8593, z: 0}
+  m_LocalPosition: {x: -400, y: 342.52875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2008974258}
@@ -1265,7 +1265,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1756993573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 304.8593, z: 0}
+  m_LocalPosition: {x: 0, y: 342.52875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2008974258}
@@ -1537,7 +1537,7 @@ RectTransform:
   m_GameObject: {fileID: 2008974254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 90}
-  m_LocalScale: {x: 0.18938254, y: 0.18938254, z: 0.18938254}
+  m_LocalScale: {x: 0.16855529, y: 0.16855529, z: 0.16855529}
   m_Children:
   - {fileID: 1333584378}
   - {fileID: 1756993574}
@@ -1563,6 +1563,7 @@ GameObject:
   - component: {fileID: 2081129102}
   - component: {fileID: 2081129101}
   - component: {fileID: 2081129104}
+  - component: {fileID: 2081129105}
   m_Layer: 5
   m_Name: InputField
   m_TagString: Untagged
@@ -1639,6 +1640,17 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2081129105}
+        m_MethodName: getText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2081129104}
         m_MethodName: ar
         m_Mode: 1
@@ -1708,3 +1720,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84b9515f9e64463a9c0a55c92ca7dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2081129105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2081129099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc02153d00c24f4b8c7d5e90023329c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iField: {fileID: 2081129101}
