@@ -1,24 +1,24 @@
 import socket 
 import webScrape             
 
-s = socket.socket()         
+soc = socket.socket()         
 print ("Socket successfully created")
 
 port = 5204               
-s.bind(('', port))        
+soc.bind(('', port))        
 print ("socket binded to %s" %(port))
  
-s.listen(1)     
+soc.listen(1)     
 print ("socket is listening")          
  
 
-c, addr = s.accept()     
+conn, addr = soc.accept()     
 print ('Got connection from', addr)
 
 while True:
 	try:
 		print ('Receiving')
-		data = c.recv(1028)
+		data = conn.recv(1028)
 		if data:
 			data = data.decode().rstrip("\n\r")
 			print("to send "+data, ", length: ", len(data))
@@ -37,7 +37,7 @@ def sendToUnity(chords):
 	if (len(chords)!=0):
 		try:
 			chords = chords + "\n\r"
-			c.send(chords)
+			conn.send(chords)
 		except:
-			c.close()
+			conn.close()
 				

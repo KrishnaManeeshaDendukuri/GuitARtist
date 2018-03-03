@@ -5,26 +5,22 @@ import youtube_dl
 import sys
 import os
 
-def ytscrape(searchurl,baseurl):
-    req = Request(searchurl, headers={'User-Agent':'Mozilla/5.0'})
+def ytscrape(search,base):
+    req = Request(search, headers={'User-Agent':'Mozilla/5.0'})
     lst[:] = []
     url = urlopen(req)
     soup = BeautifulSoup(url, 'lxml')
     for i in soup.find_all('div',{'class':['yt-lockup-content','yt-lockup-meta-info']},limit=10):
         for link,views in zip(i.select('h3 > a'),i.select('ul > li')):
             if views is not None and views.next_sibling is not None:
-                lst.append([baseurl+link.get('href'),views.next_sibling.text])
+                lst.append([base+link.get('href'),views.next_sibling.text])
     for i in lst:
         i[1] = int(re.sub(r' views|,','',i[1]))
     lst.sort(key = lambda x:x[1])
     url.close()
     return lst[-1][0]
 
-def dl_frm_youtube(yt_lnk,dlpath):
-    """passes the youtube url of the song. it extracts audio alone and saves it
-    in local.
-    yt_lnk : youtube url for song which is priortised based on channel/views.
-    """
+def dl_from_youtube(yt_lnk,dlpath):
     ydl_opts = {'format':'bestaudio/best','outtmpl':dlpath+'\\%(title)s.%(ext)s','postprocessors':[{'key':'FFmpegExtractAudio','preferredcodec':'mp3','preferredquality':'192',}]}
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(yt_lnk, download=True)
@@ -35,7 +31,7 @@ def dl_frm_youtube(yt_lnk,dlpath):
             print('not found')
 
 def main(song_name,artist_name):
-    song = str(song_name) 
+    song = str(song_name) + "karaoke"
     artist = str(artist_name)
     baseurl = 'https://www.youtube.com'
     if sys.platform == 'win32':
@@ -45,7 +41,7 @@ def main(song_name,artist_name):
     else:
         dlpath = '~/Music/' + song + '.mp3'
     searchurl = baseurl + '/results?search_query=' + '+' + artist.replace(chr(32),'+') + '+' + song.replace(chr(32),'+')
-    dl_frm_youtube(ytscrape(searchurl,baseurl),dlpath)
+    dl_from_youtube(ytscrape(searchurl,baseurl),dlpath)
 
 
 lst = []
