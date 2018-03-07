@@ -198,7 +198,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 600297934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -101.54999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1163365128}
@@ -206,8 +206,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000002861023}
-  m_SizeDelta: {x: 635, y: 357.3}
+  m_AnchoredPosition: {x: -0.00000076555, y: -101.55}
+  m_SizeDelta: {x: 798.66, y: 994.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &600297936
 MonoBehaviour:
@@ -230,18 +230,26 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 32
+    m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MinSize: 0
+    m_MaxSize: 44
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Write relevant stuff here
+  m_Text: "  Welcome to GuitARtist! Follow these instructions to make the best use
+    of our app!\n\n    1) If you are a beginner, make sure you \"Warm-Up\" before
+    moving on to \"Play\". \n\n    2) In the \"Play\" menu, try out our suggested
+    songs so you get an idea of the type of songs to be played on the guitar.\n\n
+    \   3) Enter songs in the input field that contain a lot of guitar parts to have
+    the best experience.\n\n    4) In the input field, enter the SONG NAME followed
+    by A COMMA and then the ARTIST NAME.\n     Eg: Hey Jude,The Beatles\n\n    5)
+    You can go back to the main menu at any point by clicking on our app logo.\n\nIf
+    you have any more questions or concerns, feel free to contact us at minakshi@mit.edu!"
 --- !u!222 &600297937
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -411,7 +419,7 @@ RectTransform:
   m_GameObject: {fileID: 1163365124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 90}
-  m_LocalScale: {x: 0.2359131, y: 0.2359131, z: 0.2359131}
+  m_LocalScale: {x: 0.09638651, y: 0.09638651, z: 0.09638651}
   m_Children:
   - {fileID: 2090483961}
   - {fileID: 1892197338}
@@ -516,7 +524,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1335831428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400.00003, y: 244.73007, z: 0}
+  m_LocalPosition: {x: -399.32996, y: 598.99493, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1163365128}
@@ -524,8 +532,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
-  m_SizeDelta: {x: 101.7, y: 66.08}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 254.2, y: 203.1}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1335831430
 MonoBehaviour:
@@ -647,7 +655,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1892197337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 244.73007, z: 0}
+  m_LocalPosition: {x: 0, y: 598.99493, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1163365128}
@@ -656,7 +664,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 57.2}
+  m_SizeDelta: {x: 0, y: 203.1}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1892197339
 MonoBehaviour:
@@ -679,11 +687,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 38
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

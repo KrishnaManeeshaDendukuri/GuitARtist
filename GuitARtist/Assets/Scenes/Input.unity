@@ -168,7 +168,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -179,7 +179,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Knockin' on heaven's door
+  m_Text: Knockin' on heaven's door, Bob Dylan
 --- !u!222 &21859806
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 406361012}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -168, z: 0}
+  m_LocalPosition: {x: -7.1988983, y: -265.6, z: 0}
   m_LocalScale: {x: 0.9999869, y: 0.9999869, z: 0.9999869}
   m_Children:
   - {fileID: 1978853841}
@@ -294,8 +294,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -168}
-  m_SizeDelta: {x: 184.1, y: 50.05}
+  m_AnchoredPosition: {x: -7.1989, y: -265.6}
+  m_SizeDelta: {x: 420.1, y: 93.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &406361014
 MonoBehaviour:
@@ -548,7 +548,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 842077084}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.80000305, y: 43.3, z: 0}
+  m_LocalPosition: {x: -3.6107025, y: 172, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1266410127}
@@ -556,8 +556,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79999995, y: 43.3}
-  m_SizeDelta: {x: 291.1, y: 46.6}
+  m_AnchoredPosition: {x: -3.6107, y: 172}
+  m_SizeDelta: {x: 412.92, y: 96.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &842077086
 MonoBehaviour:
@@ -580,7 +580,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -654,7 +654,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 30
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 2
@@ -665,7 +665,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter the song name...
+  m_Text: 'Eg: Hey Jude, The Beatles'
 --- !u!222 &1251505806
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -834,7 +834,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -845,7 +845,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Love me do
+  m_Text: Love me do, The Beatles
 --- !u!222 &1437026745
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -878,7 +878,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1563691893}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7999878, y: -24.975, z: 0}
+  m_LocalPosition: {x: -7.175003, y: 42.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 21859804}
@@ -887,8 +887,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79998994, y: -24.975}
-  m_SizeDelta: {x: 184.1, y: 50.05}
+  m_AnchoredPosition: {x: -7.175, y: 42.75}
+  m_SizeDelta: {x: 420.15, y: 85.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1563691895
 MonoBehaviour:
@@ -1012,17 +1012,17 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1578869247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 342.52875, z: 0}
+  m_LocalPosition: {x: -399.32996, y: -598.99493, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2008974258}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 121.3, y: 69.3}
-  m_Pivot: {x: 0, y: 1}
+  m_SizeDelta: {x: 254, y: 248.29999}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1578869249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1144,7 +1144,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1662211072}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.80000305, y: -97, z: 0}
+  m_LocalPosition: {x: 0, y: -108, z: 0}
   m_LocalScale: {x: 0.9999869, y: 0.9999869, z: 0.9999869}
   m_Children:
   - {fileID: 1437026743}
@@ -1153,8 +1153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79999995, y: -97}
-  m_SizeDelta: {x: 184.1, y: 50.05}
+  m_AnchoredPosition: {x: 0, y: -108}
+  m_SizeDelta: {x: 420.15, y: 97.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1662211074
 MonoBehaviour:
@@ -1265,7 +1265,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1756993573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 342.52875, z: 0}
+  m_LocalPosition: {x: 0, y: 598.99493, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2008974258}
@@ -1274,7 +1274,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 69.3}
+  m_SizeDelta: {x: 0, y: 188.7}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1756993575
 MonoBehaviour:
@@ -1297,11 +1297,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 32
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1436,7 +1436,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1447,7 +1447,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sweet Caroline
+  m_Text: Sweet Caroline, Neil Diamond
 --- !u!222 &1978853843
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1537,7 +1537,7 @@ RectTransform:
   m_GameObject: {fileID: 2008974254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 90}
-  m_LocalScale: {x: 0.16855529, y: 0.16855529, z: 0.16855529}
+  m_LocalScale: {x: 0.09638651, y: 0.09638651, z: 0.09638651}
   m_Children:
   - {fileID: 1333584378}
   - {fileID: 1756993574}
@@ -1578,7 +1578,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2081129099}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6, y: 121, z: 0}
+  m_LocalPosition: {x: -7.175003, y: 318, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1251505804}
@@ -1588,8 +1588,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: 121}
-  m_SizeDelta: {x: 301.5, y: 55.5}
+  m_AnchoredPosition: {x: -7.175, y: 318}
+  m_SizeDelta: {x: 420.15, y: 98.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081129101
 MonoBehaviour:
@@ -1731,4 +1731,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc02153d00c24f4b8c7d5e90023329c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ready: 0
+  running: 1
+  message: 
   iField: {fileID: 2081129101}
+  text: 
+  song: 

@@ -5,7 +5,7 @@ soc = socket.socket()
 print ("Socket successfully created")
 
 port = 5204               
-soc.bind(('', port))        
+soc.bind(("", port))        
 print ("socket binded to %s" %(port))
  
 soc.listen(1)     

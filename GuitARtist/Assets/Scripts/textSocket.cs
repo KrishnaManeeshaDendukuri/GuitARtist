@@ -36,7 +36,7 @@ public class textSocket : MonoBehaviour
 
 	public void initThread()
 	{
-		TcpClient client = new TcpClient("", 5204); //127.0.0.1 for local machine
+		TcpClient client = new TcpClient("192.168.43.13", 5204); //127.0.0.1 for local machine
 		s = client.GetStream();
 		sr = new StreamReader(s);
 		sw = new StreamWriter(s);
