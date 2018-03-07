@@ -21,7 +21,7 @@ def ytscrape(search,base):
     return lst[-1][0]
 
 def dl_from_youtube(yt_lnk,dlpath):
-    ydl_opts = {'format':'bestaudio/best','outtmpl':dlpath+'\\%(title)s.%(ext)s','postprocessors':[{'key':'FFmpegExtractAudio','preferredcodec':'mp3','preferredquality':'192',}]}
+    ydl_opts = {'format':'bestaudio/best','outtmpl':dlpath+'\\%(title)s.%(ext)s','postprocessors':[{'key':'FFmpegExtractAudio','preferredcodec':'wav','preferredquality':'192',}]}
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(yt_lnk, download=True)
         songname = info.get('title', None)
