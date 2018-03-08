@@ -9,18 +9,13 @@ public class noKillMe : MonoBehaviour {
 	// Use this for initialization
 	void Awake () 
 	{
-		if (SceneManager.GetActiveScene().name == "AR") 
-		{
-			DontDestroyOnLoad (transform.gameObject);
-			GetComponent<VuforiaBehaviour> ().enabled = true;
-			GetComponent<DefaultInitializationErrorHandler> ().enabled = true;
-		}
+		DontDestroyOnLoad (transform.gameObject);
+		GetComponent<VuforiaBehaviour> ().enabled = true;
+		GetComponent<DefaultInitializationErrorHandler> ().enabled = true;
 
-		else if (SceneManager.GetActiveScene().name == "Database") 
+		if (SceneManager.GetActiveScene ().name == "Main")
 		{
-			DontDestroyOnLoad (transform.gameObject);
-			GetComponent<VuforiaBehaviour> ().enabled = true;
-			GetComponent<DefaultInitializationErrorHandler> ().enabled = true;
+			Destroy (transform.gameObject);
 		}
 	}
 	

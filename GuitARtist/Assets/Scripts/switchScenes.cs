@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Vuforia;
+using System;
 
 public class switchScenes : MonoBehaviour {
 	Scene currScene;
@@ -52,8 +53,16 @@ public class switchScenes : MonoBehaviour {
 
 	public void menu()
 	{
+		PlayerPrefs.SetInt ("LoadingLevel",1);
 		VuforiaRuntime.Instance.Deinit ();
-		Destroy (GameObject.Find("ARCamera"));
+		try
+		{
+			Destroy (GameObject.Find("ARCamera"));
+		}
+		catch(Exception e) 
+		{
+			Debug.LogException (e,this);
+		}
 		Application.LoadLevel ("Main");
 	}
 
@@ -75,5 +84,12 @@ public class switchScenes : MonoBehaviour {
 		VuforiaRuntime.Instance.InitVuforia ();
 		Application.LoadLevel ("Database");
 		db_song = 2;
+	}
+
+	public void warmUp()
+	{
+		VuforiaRuntime.Instance.InitVuforia ();
+		Application.LoadLevel ("Tutorial");
+		db_song = 3;
 	}
 }

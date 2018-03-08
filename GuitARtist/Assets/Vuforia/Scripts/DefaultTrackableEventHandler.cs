@@ -27,6 +27,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
+		TrackerManager.Instance.GetStateManager().ReassociateTrackables();
     }
 
     #endregion // UNTIY_MONOBEHAVIOUR_METHODS
@@ -37,6 +38,11 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     ///     Implementation of the ITrackableEventHandler function called when the
     ///     tracking state changes.
     /// </summary>
+	/// 
+	void Awake()
+	{
+		PlayerPrefs.SetInt ("LoadingLevel",0);
+	}
     public void OnTrackableStateChanged(
         TrackableBehaviour.Status previousStatus,
         TrackableBehaviour.Status newStatus)
@@ -48,18 +54,21 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
             OnTrackingFound();
         }
-        else if (previousStatus == TrackableBehaviour.Status.TRACKED &&
+       /* else if (previousStatus == TrackableBehaviour.Status.TRACKED &&
                  newStatus == TrackableBehaviour.Status.NOT_FOUND)
         {
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
             OnTrackingLost();
-        }
+        }*/
         else
         {
             // For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND
             // Vuforia is starting, but tracking has not been lost or found yet
             // Call OnTrackingLost() to hide the augmentations
-            OnTrackingLost();
+			if (PlayerPrefs.GetInt("LoadingLevel") == 0)
+				{
+					OnTrackingLost();
+				}
         }
     }
 

@@ -399,7 +399,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 880699560}
-        m_MethodName: ar
+        m_MethodName: warmUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
