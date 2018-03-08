@@ -248,8 +248,10 @@ MonoBehaviour:
     \   3) Enter songs in the input field that contain a lot of guitar parts to have
     the best experience.\n\n    4) In the input field, enter the SONG NAME followed
     by A COMMA and then the ARTIST NAME.\n     Eg: Hey Jude,The Beatles\n\n    5)
-    You can go back to the main menu at any point by clicking on our app logo.\n\nIf
-    you have any more questions or concerns, feel free to contact us at minakshi@mit.edu!"
+    You can go back to the main menu at any point by clicking on our app logo.\n\n
+    \   6) Make sure you know a song before you attempt it to allow room to experiment
+    with strumming!\n\nIf you have any more questions or concerns, feel free to contact
+    us at minakshi@mit.edu!"
 --- !u!222 &600297937
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -267,6 +269,10 @@ GameObject:
   - component: {fileID: 732201415}
   - component: {fileID: 732201414}
   - component: {fileID: 732201413}
+  - component: {fileID: 732201417}
+  - component: {fileID: 732201418}
+  - component: {fileID: 732201420}
+  - component: {fileID: 732201419}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -336,6 +342,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &732201417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 732201412}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1826476478, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mWorldCenterMode: 1
+  mWorldCenter: {fileID: 0}
+--- !u!114 &732201418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 732201412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 692be62bfc16649ff94a939145b84712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &732201419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 732201412}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -216180923, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &732201420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 732201412}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47f92041efbb4b429a4eafca855ebe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1163365124
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +562,7 @@ GameObject:
   - component: {fileID: 1335831432}
   - component: {fileID: 1335831431}
   - component: {fileID: 1335831430}
+  - component: {fileID: 1335831434}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -546,6 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84b9515f9e64463a9c0a55c92ca7dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  songDatabase: {fileID: 1335831434}
 --- !u!114 &1335831431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,6 +685,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1335831428}
+--- !u!114 &1335831434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1335831428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976dcbdc54d31499d8741893efdba5de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chordName: {fileID: 0}
+  strum: {fileID: 0}
 --- !u!1 &1892197337
 GameObject:
   m_ObjectHideFlags: 0

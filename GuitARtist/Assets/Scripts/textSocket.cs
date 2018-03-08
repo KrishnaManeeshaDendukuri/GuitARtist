@@ -20,9 +20,13 @@ public class textSocket : MonoBehaviour
 	public string message;
 	string temp;
 
+	//Variables to recieve song name
 	public InputField iField;
 	public string text;
 	public string song;
+
+	//Variables to implement the received chords
+	public Text disp;
 	// Use this for initialization
 	void Start () 
 	{
@@ -75,6 +79,8 @@ public class textSocket : MonoBehaviour
 			{
 				message = sr.ReadLine();
 				print("Recieved : " + message);
+
+				disp.text = message;
 			}
 			catch (Exception e)
 			{

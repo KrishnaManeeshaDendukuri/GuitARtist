@@ -2,22 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Vuforia;
 
 public class switchScenes : MonoBehaviour {
 	Scene currScene;
-	// Use this for initialization
-	void Start () {
-		
+	static int db_song = 0;
+	public songScript songDatabase;
+
+	void Start () 
+	{
+		songDatabase = GameObject.FindObjectOfType (typeof(songScript)) as songScript;
+		songDatabase.dbSong (db_song);
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
 		currScene=SceneManager.GetActiveScene();
-		if (Input.GetKeyDown (KeyCode.Escape) & currScene.name=="Main") 
+		if (Input.GetKeyDown (KeyCode.Escape) & currScene.name == "Main") 
 		{
 			Application.Quit ();
-		}	
+		}
+		else if (Input.GetKeyDown (KeyCode.Escape) & currScene.name == "AR") 
+		{
+			VuforiaRuntime.Instance.Deinit ();
+			Application.LoadLevel ("Input");
+		}
+		else if (Input.GetKeyDown (KeyCode.Escape) & currScene.name == "Database") 
+		{
+			VuforiaRuntime.Instance.Deinit ();
+			Application.LoadLevel ("Input");
+		}
 	}
 
 	public void settings()
@@ -37,11 +52,28 @@ public class switchScenes : MonoBehaviour {
 
 	public void menu()
 	{
+		VuforiaRuntime.Instance.Deinit ();
+		Destroy (GameObject.Find("ARCamera"));
 		Application.LoadLevel ("Main");
 	}
 
 	public void ar()
 	{
+		VuforiaRuntime.Instance.InitVuforia ();
 		Application.LoadLevel ("AR");
+	}
+
+	public void db1()
+	{
+		VuforiaRuntime.Instance.InitVuforia ();
+		Application.LoadLevel ("Database");
+		db_song = 1;
+	}
+
+	public void db2()
+	{
+		VuforiaRuntime.Instance.InitVuforia ();
+		Application.LoadLevel ("Database");
+		db_song = 2;
 	}
 }

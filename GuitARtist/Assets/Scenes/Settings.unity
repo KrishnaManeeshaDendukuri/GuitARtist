@@ -671,6 +671,10 @@ GameObject:
   - component: {fileID: 1078064063}
   - component: {fileID: 1078064062}
   - component: {fileID: 1078064061}
+  - component: {fileID: 1078064065}
+  - component: {fileID: 1078064066}
+  - component: {fileID: 1078064068}
+  - component: {fileID: 1078064067}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -740,6 +744,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1078064065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078064060}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1826476478, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mWorldCenterMode: 1
+  mWorldCenter: {fileID: 0}
+--- !u!114 &1078064066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078064060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 692be62bfc16649ff94a939145b84712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1078064067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078064060}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47f92041efbb4b429a4eafca855ebe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1078064068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078064060}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -216180923, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1107526047
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,6 +802,7 @@ GameObject:
   - component: {fileID: 1107526051}
   - component: {fileID: 1107526050}
   - component: {fileID: 1107526049}
+  - component: {fileID: 1107526053}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -788,6 +839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84b9515f9e64463a9c0a55c92ca7dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  songDatabase: {fileID: 1107526053}
 --- !u!114 &1107526050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,6 +925,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1107526047}
+--- !u!114 &1107526053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1107526047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976dcbdc54d31499d8741893efdba5de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chordName: {fileID: 0}
+  strum: {fileID: 0}
 --- !u!1 &1266757189
 GameObject:
   m_ObjectHideFlags: 0

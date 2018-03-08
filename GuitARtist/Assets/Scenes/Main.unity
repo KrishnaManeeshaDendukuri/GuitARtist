@@ -332,7 +332,6 @@ GameObject:
   - component: {fileID: 451135903}
   - component: {fileID: 451135902}
   - component: {fileID: 451135901}
-  - component: {fileID: 451135900}
   m_Layer: 5
   m_Name: WarmUp
   m_TagString: Untagged
@@ -360,17 +359,6 @@ RectTransform:
   m_AnchoredPosition: {x: 91.000015, y: -58.65}
   m_SizeDelta: {x: 386, y: 117.3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &451135900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 451135898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c84b9515f9e64463a9c0a55c92ca7dec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &451135901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,7 +398,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 451135900}
+      - m_Target: {fileID: 880699560}
         m_MethodName: ar
         m_Mode: 1
         m_Arguments:
@@ -604,6 +592,7 @@ GameObject:
   - component: {fileID: 880699558}
   - component: {fileID: 880699557}
   - component: {fileID: 880699560}
+  - component: {fileID: 880699561}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -727,6 +716,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84b9515f9e64463a9c0a55c92ca7dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  songDatabase: {fileID: 880699561}
+--- !u!114 &880699561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 880699555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976dcbdc54d31499d8741893efdba5de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chordName: {fileID: 0}
+  strum: {fileID: 0}
 --- !u!1 &978265326
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,6 +809,10 @@ GameObject:
   - component: {fileID: 1205695926}
   - component: {fileID: 1205695925}
   - component: {fileID: 1205695924}
+  - component: {fileID: 1205695928}
+  - component: {fileID: 1205695929}
+  - component: {fileID: 1205695931}
+  - component: {fileID: 1205695930}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -875,6 +882,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1205695928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205695923}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1826476478, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mWorldCenterMode: 1
+  mWorldCenter: {fileID: 0}
+--- !u!114 &1205695929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205695923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 692be62bfc16649ff94a939145b84712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1205695930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205695923}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47f92041efbb4b429a4eafca855ebe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1205695931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205695923}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -216180923, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1230095116
 GameObject:
   m_ObjectHideFlags: 0
