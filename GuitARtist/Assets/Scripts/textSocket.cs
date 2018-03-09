@@ -10,6 +10,7 @@ using System;
 
 public class textSocket : MonoBehaviour 
 {
+	//Variables to set up the client
 	TcpClient client;
 	Stream s;
 	StreamReader sr;
@@ -26,11 +27,14 @@ public class textSocket : MonoBehaviour
 	public string song;
 
 	//Variables to implement the received chords
-	public Text disp;
+	private string disp;
+	public streamChords sendChords;
 	// Use this for initialization
 	void Start () 
 	{
 		new Thread(initThread).Start();
+		sendChords = GameObject.FindObjectOfType (typeof(streamChords)) as streamChords;
+		sendChords.receive (disp);
 	}
 	
 	// Update is called once per frame
@@ -80,7 +84,7 @@ public class textSocket : MonoBehaviour
 				message = sr.ReadLine();
 				print("Recieved : " + message);
 
-				disp.text = message;
+				disp = message;
 			}
 			catch (Exception e)
 			{

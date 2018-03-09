@@ -7,6 +7,7 @@ public class songScript : MonoBehaviour {
 	public Text chordName; 
 	public Text strum;
 	private int dbNum;
+	static float spLev = 2f;
 
 	private string bob;
 	private string beatle;
@@ -46,10 +47,17 @@ public class songScript : MonoBehaviour {
 		}
 	}
 
+	public void waitSpeed(float sp)
+	{
+		spLev = sp;
+		Debug.Log ("Speed set" + spLev);
+	}
+
 	IEnumerator bobDylan()
 	{
-		bob = "G D C ; G D a- G D C- G D a- G D C; G D C- G D C- G D C- G D C. G D a- G D C- G D a- G D C; G D C- G D C- G D C- G D C";
-		WaitForSeconds wait = new WaitForSeconds (6f);
+		bob = "G D C ; G D a: G D C- G D a- G D C; G D C: G D C: G D C: G D C. G D a: G D C: G D a: G D C; G D C: G D C: G D C: G D C";
+		WaitForSeconds wait = new WaitForSeconds (spLev);
+		print ("Waiting for time: " + spLev);
 		yield return wait;
 		foreach (char c in bob) 
 		{
@@ -70,7 +78,7 @@ public class songScript : MonoBehaviour {
 				chordName.text = "Keep Repeating";
 			}
 
-			if (c.ToString() == "-") 
+			if (c.ToString() == ":") 
 			{
 				chordName.text = "Next Line";
 			}
@@ -82,7 +90,7 @@ public class songScript : MonoBehaviour {
 	IEnumerator beatles()
 	{
 		beatle = "G C. ; G C- G C- G C- C C G- G C- G C- G C- C C G; D CFG- D CFG. G C. ; G C- G C- G C- C C G- G C- G C- G C- C C G";
-		WaitForSeconds wait = new WaitForSeconds (6f);
+		WaitForSeconds wait = new WaitForSeconds (spLev);
 		yield return wait;
 		foreach (char c in beatle) 
 		{
@@ -114,7 +122,7 @@ public class songScript : MonoBehaviour {
 
 	IEnumerator warmUpS()
 	{ 
-		WaitForSeconds wait = new WaitForSeconds (6f);
+		WaitForSeconds wait = new WaitForSeconds (3f);
 		yield return wait;
 		strum.text = "D - Strum all strings DOWN in one swipe";
 		yield return wait;
@@ -126,27 +134,16 @@ public class songScript : MonoBehaviour {
 
 	IEnumerator warmUpC()
 	{
-		tut = "A B C D E F G a b d e. A B C D E F G a b d e";
-		WaitForSeconds wait = new WaitForSeconds (6f);
+		tut = "A a b C D E e F f G. A a b C D E e F f G";
+		WaitForSeconds wait = new WaitForSeconds (3f);
 		yield return wait;
 
 		foreach (char c in tut) 
 		{
 			chordName.text = c.ToString ();
-			if (c.ToString () == ";") {
-				if (chordName.text == "Verse") {
-					chordName.text = "Chorus";
-				} else {
-					chordName.text = "Verse";
-				}
-			}
-
-			if (c.ToString () == ".") {
+			if (c.ToString () == ".") 
+			{
 				chordName.text = "Keep Repeating";
-			}
-
-			if (c.ToString () == "-") {
-				chordName.text = "Next Line";
 			}
 
 			yield return wait;

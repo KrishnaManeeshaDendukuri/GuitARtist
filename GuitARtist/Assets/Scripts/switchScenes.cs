@@ -8,6 +8,7 @@ using System;
 public class switchScenes : MonoBehaviour {
 	Scene currScene;
 	static int db_song = 0;
+	static float speed;
 	public songScript songDatabase;
 
 	void Start () 
@@ -91,5 +92,23 @@ public class switchScenes : MonoBehaviour {
 		VuforiaRuntime.Instance.InitVuforia ();
 		Application.LoadLevel ("Tutorial");
 		db_song = 3;
+	}
+
+	public void beginner()
+	{
+		speed = 3f;
+		songDatabase.waitSpeed (speed);
+	}
+
+	public void inter()
+	{
+		speed = 2f;
+		songDatabase.waitSpeed (speed);
+	}
+
+	public void expert()
+	{
+		speed = 1f;
+		songDatabase.waitSpeed (speed);
 	}
 }
