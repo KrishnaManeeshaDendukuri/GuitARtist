@@ -17,15 +17,24 @@ public class streamChords : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		chord.text = revChord;
-		if (chord.text == "-") 
-		{
-			chord.text = "Non-Guitar tones here";
-		}
+		
 	}
 
 	public void receive(string chor)
 	{
 		revChord = chor;
+		WaitForSeconds wait = new WaitForSeconds (2f);
+		yield return wait;
+		foreach (char c in revChord) 
+		{
+			chord.text = c.ToString();
+
+			if (c.ToString() == "-") 
+			{
+				chord.text = "Non Guitar tones here";
+			}
+
+			yield return wait;
+		}
 	}
 }
