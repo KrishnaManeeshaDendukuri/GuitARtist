@@ -537,6 +537,7 @@ GameObject:
   - component: {fileID: 549326751}
   - component: {fileID: 549326754}
   - component: {fileID: 549326755}
+  - component: {fileID: 549326756}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -672,6 +673,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chordName: {fileID: 1802575128}
   strum: {fileID: 168920823}
+--- !u!114 &549326756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 549326749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf4abffa723a4f3ebb9706a7f334dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ready: 0
+  running: 1
+  message: 
+  chord: {fileID: 1802575128}
 --- !u!1 &555082013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,6 +1398,7 @@ GameObject:
   - component: {fileID: 1714384746}
   - component: {fileID: 1714384750}
   - component: {fileID: 1714384751}
+  - component: {fileID: 1714384752}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1503,7 +1520,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf4abffa723a4f3ebb9706a7f334dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ready: 0
+  running: 1
+  message: 
   chord: {fileID: 1802575128}
+--- !u!114 &1714384752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1714384745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc02153d00c24f4b8c7d5e90023329c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ready: 0
+  running: 0
+  message: 
+  iField: {fileID: 0}
+  text: 
+  song: 
 --- !u!1 &1802575126
 GameObject:
   m_ObjectHideFlags: 0

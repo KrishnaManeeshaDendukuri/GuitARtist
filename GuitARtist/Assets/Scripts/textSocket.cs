@@ -15,9 +15,9 @@ public class textSocket : MonoBehaviour
 	Stream s;
 	StreamReader sr;
 	StreamWriter sw;
-	Thread recvT;
+	//Thread recvT;
 	public bool ready = false;
-	public bool running = true;
+	public bool running = false;
 	public string message;
 	string temp;
 
@@ -26,15 +26,11 @@ public class textSocket : MonoBehaviour
 	public string text;
 	public string song;
 
-	//Variables to implement the received chords
-	private string disp;
-	public streamChords sendChords;
 	// Use this for initialization
 	void Start () 
 	{
 		new Thread(initThread).Start();
-		sendChords = GameObject.FindObjectOfType (typeof(streamChords)) as streamChords;
-		sendChords.receive (disp);
+		running = true;
 	}
 	
 	// Update is called once per frame
@@ -44,14 +40,10 @@ public class textSocket : MonoBehaviour
 
 	public void initThread()
 	{
-		TcpClient client = new TcpClient("192.168.43.13", 5204); //127.0.0.1 for local machine
+		TcpClient client = new TcpClient("192.168.43.13", 12345); //Change the IP here; Not the port.
 		s = client.GetStream();
-		sr = new StreamReader(s);
 		sw = new StreamWriter(s);
 		sw.AutoFlush = true;
-
-		recvT = new Thread(recvThread);
-		recvT.Start();
 
 		ready = true;
 	}
@@ -69,30 +61,11 @@ public class textSocket : MonoBehaviour
 			string name = temp;
 			sw.WriteLine(name);
 		}
-		catch
+		catch (Exception e)
 		{
+			print (e);
 		}
 	}
-
-	public void recvThread()
-	{
-		print("RecvThread started...");
-		while (running)
-		{
-			try
-			{
-				message = sr.ReadLine();
-				print("Recieved : " + message);
-
-				disp = message;
-			}
-			catch (Exception e)
-			{
-				print(e);
-			}
-		}
-	}
-
 
 	public void getText()
 	{

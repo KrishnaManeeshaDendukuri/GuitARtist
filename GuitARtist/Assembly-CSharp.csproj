@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\chordScript.cs" />
+     <Compile Include="Assets\Scripts\DoOnMainThread.cs" />
      <Compile Include="Assets\Scripts\noARPlease.cs" />
      <Compile Include="Assets\Scripts\noKillMe.cs" />
      <Compile Include="Assets\Scripts\songScript.cs" />
